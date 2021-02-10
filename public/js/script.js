@@ -13,7 +13,7 @@ document.getElementById('add-btn-edit').style.visibility = 'hidden';
 
 function addFieldEdit(iae) {
   iae = parseInt(iae)+parseInt(count);
-
-  $("#dynamicAddRemove").append('<tr><td><input type="text" name="moreFields['+iae+'][nome]" placeholder="Email" class="form-control" required/></td><td><input type="text" name="moreFields['+iae+'][valor]" placeholder="teste@gmail.com" class="form-control" required/></td><td><button type="button" class="btn btn-danger remove-tr">Remover Linha</button></td></tr>');
+  document.getElementById('btn-remove').style.visibility = 'hidden';
+  $("#dynamicAddRemove").append('<tr><td><input type="text" name="moreFields['+iae+'][nome]" placeholder="Email" class="form-control" required/></td><td><input type="text" name="moreFields['+iae+'][valor]" placeholder="teste@gmail.com" class="form-control" required/></td><td><button id="btn-remove" type="button" class="btn btn-danger remove-tr">Remover Linha</button></td></tr>');
   count++;
   }

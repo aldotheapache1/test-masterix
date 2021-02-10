@@ -61,7 +61,7 @@
                                     @if($index == 0) 
                                     <td><button onclick="addFieldEdit('{{count($contatos)}}')" type="button" name="add" id="add-btn-edit" class="btn btn-primary">Add Linha</button></td>
                                     @else
-                                    </td><td><button type="button" class="btn btn-danger remove-tr">Remover Linha</button></td></tr>
+                                    </td><td><button id="btn-remove" type="button" class="btn btn-danger remove-tr">Remover Linha</button></td></tr>
                                     @endif
                               </tr>  
                               @endforeach
