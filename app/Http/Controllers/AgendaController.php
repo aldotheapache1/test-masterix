@@ -18,7 +18,7 @@ class AgendaController extends Controller
 
             $contatos = Pessoa::where([
                 ['nome', 'like', '%' . $search . '%']
-            ])->get();
+            ])->paginate(10);
 
             $tiposContatos = Contato::all();
         } else {
