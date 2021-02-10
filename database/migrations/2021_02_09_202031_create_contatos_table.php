@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateContatoTable extends Migration
+class CreateContatosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateContatoTable extends Migration
      */
     public function up()
     {
-        Schema::create('contato', function (Blueprint $table) {
+        Schema::create('contatos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nome');
+            $table->foreignId('pessoa_id')->constrained('pessoas');
+            $table->string('nome'); 
             $table->string('valor');
         });
     }
@@ -28,6 +29,7 @@ class CreateContatoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contato');
+        Schema::dropIfExists('contatos');
+        $table->foreignId('pessoa_id')->references('id')->on('pessoa')->onDelete('cascade');
     }
 }

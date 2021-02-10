@@ -24,6 +24,7 @@ class CreatePessoasTable extends Migration
             $table->string('cidade');
             $table->string('estado');
             $table->string('pais');
+            
         });
     }
 
