@@ -33,7 +33,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 https://laravel.com/docs/8.x/installation
 
 # 2º Clone o repositório com o comando abaixo:
-git clone https://github.com/aldotheapache1/Events-Laravel.git
+git clone https://github.com/aldotheapache1/test-masterix.git
 
 # 3º Crie ou modifique o arquivo .env com as informações da sua base de dados.
 
